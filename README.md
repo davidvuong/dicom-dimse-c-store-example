@@ -3,7 +3,7 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 
-**Welcome to dimcom-dimse-c-store-example!**
+**Welcome to dicom-dimse-c-store-example!**
 
 This is a sample project which demonstrates how to quickly build a DIMSE C-STORE AE. It includes both an SCU and an SCP written using `pynetdicom` and `pydicom` libraries. Datasets sent through `C-STORE` operations are parsed and logged to console.
 
