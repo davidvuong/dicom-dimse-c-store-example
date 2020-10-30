@@ -7,6 +7,8 @@
 
 This is a sample project which demonstrates how to quickly build a DIMSE C-STORE AE. It includes both an SCU and an SCP written using `pynetdicom` and `pydicom` libraries. Datasets sent through `C-STORE` operations are parsed and logged to console.
 
+You can read more about how this works [here](https://www.voltron.studio/article/build-a-dicom-dimse-c-store-service-with-python).
+
 ## Getting Started
 
 Clone the repository:
