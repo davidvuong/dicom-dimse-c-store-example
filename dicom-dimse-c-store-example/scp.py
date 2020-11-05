@@ -19,7 +19,7 @@ logger.setLevel("INFO")
 
 
 @dataclass
-class SCPConfig:
+class ServiceClassProviderConfig:
     implementation_class_uid: str
     port: int
 
@@ -77,8 +77,8 @@ def safe_get(dcm: FileDataset, tag: int) -> Optional[ParsedElementValue]:
     return [] if element is None and VM != "1" else element
 
 
-class SCP:
-    def __init__(self, aet: str, config: SCPConfig) -> None:
+class ServiceClassProvider:
+    def __init__(self, aet: str, config: ServiceClassProviderConfig) -> None:
         self.config = config
         self.address = ("0.0.0.0", config.port)
 
@@ -119,8 +119,8 @@ class SCP:
 
 
 def main() -> None:
-    config = SCPConfig(implementation_class_uid=generate_uid(), port=8081)
-    server = SCP("SAMPLESCP", config)
+    config = ServiceClassProviderConfig(implementation_class_uid=generate_uid(), port=8081)
+    server = ServiceClassProvider("SAMPLESCP", config)
     server.start()
 
 
